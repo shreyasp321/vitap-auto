@@ -1,24 +1,33 @@
 import 'package:flutter/material.dart';
-import 'screens/splash_screen.dart'; // ✅ NEW IMPORT
+import 'utils/app_theme.dart';
+
+import 'screens/splash_screen.dart';
+import 'screens/signin_screen.dart';
+import 'screens/profile_screen.dart';
+import 'screens/poll_screen.dart';
+import 'screens/chat_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const VITAutoApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class VITAutoApp extends StatelessWidget {
+  const VITAutoApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'VIT Auto', // ✅ CHANGED TITLE
-      debugShowCheckedModeBanner: false, // ✅ REMOVE DEBUG BANNER
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
-        ),
-      ),
-      home: SplashScreen(), // ✅ CHANGED HOME SCREEN
+      title: 'VIT Auto',
+      theme: AppTheme.theme(),
+      debugShowCheckedModeBanner: false,
+      initialRoute: SplashScreen.route,
+      routes: {
+        SplashScreen.route: (_) => const SplashScreen(),
+        SignInScreen.route: (_) => const SignInScreen(),
+        ProfileScreen.route: (_) => const ProfileScreen(),
+        PollScreen.route: (_) => const PollScreen(),
+        ChatScreen.route: (_) => const ChatScreen(),
+      },
     );
   }
 }
