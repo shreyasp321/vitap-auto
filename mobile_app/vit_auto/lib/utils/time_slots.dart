@@ -4,29 +4,34 @@ class TimeSlot {
   const TimeSlot(this.id, this.label);
 }
 
-// Example: 7 AM to 5 PM => 11 hours.
-// You want 21 slots, so use 30-min blocks.
-// 7:00 to 17:00 (10 hours) = 20 slots, add 17:00 = 21 slots.
+/// 21 slots:
+/// 1) Above 5 AM
+/// 2) 5-6 AM ... 11 PM-12 AM (19 slots)
+/// 3) Below 12 AM
 const List<TimeSlot> kSlots = [
-  TimeSlot("SLOT_07_00", "07:00"),
-  TimeSlot("SLOT_07_30", "07:30"),
-  TimeSlot("SLOT_08_00", "08:00"),
-  TimeSlot("SLOT_08_30", "08:30"),
-  TimeSlot("SLOT_09_00", "09:00"),
-  TimeSlot("SLOT_09_30", "09:30"),
-  TimeSlot("SLOT_10_00", "10:00"),
-  TimeSlot("SLOT_10_30", "10:30"),
-  TimeSlot("SLOT_11_00", "11:00"),
-  TimeSlot("SLOT_11_30", "11:30"),
-  TimeSlot("SLOT_12_00", "12:00"),
-  TimeSlot("SLOT_12_30", "12:30"),
-  TimeSlot("SLOT_13_00", "13:00"),
-  TimeSlot("SLOT_13_30", "13:30"),
-  TimeSlot("SLOT_14_00", "14:00"),
-  TimeSlot("SLOT_14_30", "14:30"),
-  TimeSlot("SLOT_15_00", "15:00"),
-  TimeSlot("SLOT_15_30", "15:30"),
-  TimeSlot("SLOT_16_00", "16:00"),
-  TimeSlot("SLOT_16_30", "16:30"),
-  TimeSlot("SLOT_17_00", "17:00"),
+  TimeSlot("SLOT_ABOVE_5AM", "Above 5 AM"),
+
+  TimeSlot("SLOT_05_06", "5 AM to 6 AM"),
+  TimeSlot("SLOT_06_07", "6 AM to 7 AM"),
+  TimeSlot("SLOT_07_08", "7 AM to 8 AM"),
+  TimeSlot("SLOT_08_09", "8 AM to 9 AM"),
+  TimeSlot("SLOT_09_10", "9 AM to 10 AM"),
+  TimeSlot("SLOT_10_11", "10 AM to 11 AM"),
+  TimeSlot("SLOT_11_12", "11 AM to 12 PM"),
+
+  TimeSlot("SLOT_12_01", "12 PM to 1 PM"),
+  TimeSlot("SLOT_01_02", "1 PM to 2 PM"),
+  TimeSlot("SLOT_02_03", "2 PM to 3 PM"),
+  TimeSlot("SLOT_03_04", "3 PM to 4 PM"),
+  TimeSlot("SLOT_04_05", "4 PM to 5 PM"),
+
+  TimeSlot("SLOT_05_06PM", "5 PM to 6 PM"),
+  TimeSlot("SLOT_06_07PM", "6 PM to 7 PM"),
+  TimeSlot("SLOT_07_08PM", "7 PM to 8 PM"),
+  TimeSlot("SLOT_08_09PM", "8 PM to 9 PM"),
+  TimeSlot("SLOT_09_10PM", "9 PM to 10 PM"),
+  TimeSlot("SLOT_10_11PM", "10 PM to 11 PM"),
+  TimeSlot("SLOT_11_12AM", "11 PM to 12 AM"),
+
+  TimeSlot("SLOT_BELOW_12AM", "Below 12 AM"),
 ];

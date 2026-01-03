@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1005855072612",
+    "project_id": "vit-auto",
+    "storage_bucket": "vit-auto.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005855072612:android:319d549df26fc9c1bbda71",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQiWZ18M6mBQS4BFmUMLsdK0iwOK7iPW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005855072612:android:5c35247ac2f9d89abbda71",
+        "android_client_info": {
+          "package_name": "com.example.vit_auto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQiWZ18M6mBQS4BFmUMLsdK0iwOK7iPW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
